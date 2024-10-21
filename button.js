@@ -12,10 +12,12 @@ let parent = document.body;
 parent.appendChild(father);
 parent.appendChild(button)
 
-let change = true;
+
+let colors = ['#220C10', '#506C64', '#77CBB9', '#75B8C8', '#CDD3D5', '#CAE9FF'];
 const changeColor = () => {
-     change ? father.style.backgroundColor = "red" : father.style.backgroundColor = "rgb(12, 21, 21)";
-  change = !change; 
+       father.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      
+  return !father.style.backgroundColor; 
 }
 
 button.onclick = changeColor;
